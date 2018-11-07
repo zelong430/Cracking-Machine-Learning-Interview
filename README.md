@@ -34,5 +34,35 @@ Any pull request are welcome.
 * [RNN and LSTM](#rnn-and-lstm)
 
 #### Linear Regression
-* Which method is used as the cost function for linear regression?
-    RSME, so-called root square mean error.
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w_0+w_1x_1+w_2x_2" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
+    Or in vector form
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w^Tx" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
+* What is the cost function for linear regression?
+    * Mean Squared Error
+    * <img src="https://latex.codecogs.com/svg.latex?\Large&space;C=\frac{1}{2}\sum_{i=1}^{m}(h_w(x^{i}) - y^i)^2" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
+* What is the Normal Equation of linear regression
+
+* Suppose Pearson correlation between V1 and V2 is zero. In such case, is it right to conclude that V1 and V2 do not have any relation between them?
+    * No, Pearson correlation coefficient between 2 variables might be zero even when they have a relationship between them. If the correlation coefficient is zero, it just means that that they don’t move together. We can take examples like y=|x| or y=x^2
+
+* Suppose you have fitted a complex regression model on a dataset. Now, you are using Ridge regression with penality x. Is the bias going to be high or low in this case?
+    * If the penalty is very large it means model is less complex, therefore the bias would be high.
+
+* What will happen when you apply very large penalty in regularization?
+    * In lasso some of the coefficient value become zero and the resulting parameter w would be sparse but in case of Ridge, the coefficients become close to zero but not zero.
+
+* In which case, shall we use Lasso or Ridge regularization?
+    * L1 (Lasso): can shrink certain coef to zero, thus performing feature selection
+    * L2 (Ridge): shrink all coef with the same proportion; almost always outperforms L1
+    * Elastic Net: combined L1 and L2 priors as regularizer
+
+* Is linear regression sensetive to outliers in the dataset?
+    * Yes, the slope of the regression line will change due to outliers in most of the cases. So Linear Regression is sensitive to outliers.
+
+
+
+
+
