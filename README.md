@@ -34,16 +34,15 @@ Any pull request are welcome.
 * [RNN and LSTM](#rnn-and-lstm)
 
 #### Linear Regression
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w_0+w_1x_1+w_2x_2" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
-
-    Or in vector form
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w^Tx" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w_0+w_1x_1+w_2x_2" />
+ Or in vector form, 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w^Tx" />
 
 * What is the cost function for linear regression?
     * Mean Squared Error
-    * <img src="https://latex.codecogs.com/svg.latex?\Large&space;C=\frac{1}{2}\sum_{i=1}^{m}(h_w(x^{i}) - y^i)^2" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+    * <img src="https://latex.codecogs.com/svg.latex?\Large&space;C=\frac{1}{2}\sum_{i=1}^{m}(h_w(x^{i}) - y^i)^2"/>
 
-* What is the Normal Equation of linear regression
+* What is the Normal Equation of linear regression?
 
 * Suppose Pearson correlation between V1 and V2 is zero. In such case, is it right to conclude that V1 and V2 do not have any relation between them?
     * No, Pearson correlation coefficient between 2 variables might be zero even when they have a relationship between them. If the correlation coefficient is zero, it just means that that they don’t move together. We can take examples like y=|x| or y=x^2
