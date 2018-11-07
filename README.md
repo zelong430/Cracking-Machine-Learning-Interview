@@ -35,12 +35,14 @@ Any pull request are welcome.
 
 #### Linear Regression
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w_0+w_1x_1+w_2x_2" />
- Or in vector form, 
+
+Or in vector form, 
+
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w^Tx" />
 
 * What is the cost function for linear regression?
     * Mean Squared Error
-    * <img src="https://latex.codecogs.com/svg.latex?\Large&space;C=\frac{1}{2}\sum_{i=1}^{m}(h_w(x^{i}) - y^i)^2"/>
+    * <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{2}\sum_{i=1}^{m}(h_w(x^i)-y^i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{2}\sum_{i=1}^{m}(h_w(x^i)-y^i)^2" title="\frac{1}{2}\sum_{i=1}^{m}(h_w(x^i)-y^i)^2" /></a>
 
 * What is the Normal Equation of linear regression?
 
