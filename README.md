@@ -19,10 +19,10 @@ Any pull request are welcome.
 * [Computer Vision](#computer-vision)
 
 ## Classic Machine Learning
-## Supervised Learning
+### Supervised Learning
 
-* [Linear regression](#linear-regression)
-* [Logistic regression](#logistic-regression)
+* [Linear Regression](#linear-regression)
+* [Logistic Regression](#logistic-regression)
 * [Naive Bayes](#naive-bayes)
 * [KNN](#knn)
 * [SVM](#svm)
@@ -32,3 +32,7 @@ Any pull request are welcome.
 * [MLP](#mlp)
 * [CNN](#cnn)
 * [RNN and LSTM](#rnn-and-lstm)
+
+#### Linear Regression
+* Which method is used as the cost function for linear regression?
+    RSME, so-called root square mean error.
