@@ -34,17 +34,42 @@ Any pull request are welcome.
 * [RNN and LSTM](#rnn-and-lstm)
 
 #### Linear Regression
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w_0+w_1x_1+w_2x_2" />
+The formulation for linear regression: 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w(x)=w_0+w_1x_1+w_2x_2" />
 
 Or in vector form, 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w{x}=w^Tx" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_w(x^i)=w^Tx^i" />
 
 * What is the cost function for linear regression?
     * Mean Squared Error
     * <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{2}\sum_{i=1}^{m}(h_w(x^i)-y^i)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{2}\sum_{i=1}^{m}(h_w(x^i)-y^i)^2" title="\frac{1}{2}\sum_{i=1}^{m}(h_w(x^i)-y^i)^2" /></a>
 
 * What is the Normal Equation of linear regression?
+    * Vector calculus:
+        suppose X is a n * d matrix where each row corresponding to a data point and each colume corresponding to a feature. The cost function could be expressed as:
+        <a href="https://www.codecogs.com/eqnedit.php?latex=||Xw&space;-&space;\overline{y}||_2^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?||Xw&space;-&space;\overline{y}||_2^2" title="||Xw - \overline{y}||_2^2" /></a>
+
+        Therefore, the gradient of cost function with regarding to w is:
+
+        <a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown_w&space;||Xw&space;-&space;\overline{y}||_2^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown_w&space;||Xw&space;-&space;\overline{y}||_2^2" title="\bigtriangledown_w ||Xw - \overline{y}||_2^2" /></a>
+
+        =<a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown_w&space;(Xw&space;-&space;\overline{y})^T&space;(Xw&space;-&space;\overline{y})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown_w&space;(Xw&space;-&space;\overline{y})^T&space;(Xw&space;-&space;\overline{y})" title="\bigtriangledown_w (Xw - \overline{y})^T (Xw - \overline{y})" /></a>
+
+        =<a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown_w&space;(w^TX^TXw-w^TX^Ty-y^TXw-y^Ty)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown_w&space;(w^TX^TXw-w^TX^Ty-y^TXw-y^Ty)" title="\bigtriangledown_w (w^TX^TXw-w^TX^Ty-y^TXw-y^Ty)" /></a>
+
+        =<a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw" title="\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw" /></a>
+
+        Using the results from matrix calculus:
+
+        <a href="https://www.codecogs.com/eqnedit.php?latex=\\\bigtriangledown_xw^Tx=w&space;\newline&space;\bigtriangledown_xx^TAx=2A,&space;\text{where&space;A&space;is&space;symmetrix&space;matrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\\\bigtriangledown_xw^Tx=w&space;\newline&space;\bigtriangledown_xx^TAx=2A,&space;\text{where&space;A&space;is&space;symmetrix&space;matrix}" title="\\\bigtriangledown_xw^Tx=w \newline \bigtriangledown_xx^TAx=2Ax, \text{where A is symmetrix matrix}" /></a>
+
+        <a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw=2X^TXw-2X^Ty" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw=2X^TXw-2X^Ty" title="\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw=2X^TXw-2X^Ty" /></a>
+
+        By setting the gradient equal to 0, we have
+        <a href="https://www.codecogs.com/eqnedit.php?latex=w&space;=&space;(X^TX)^{-1}X^Ty" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w&space;=&space;(X^TX)^{-1}X^Ty" title="w = (X^TX)^{-1}X^Ty" /></a>
+
 
 * Suppose Pearson correlation between V1 and V2 is zero. In such case, is it right to conclude that V1 and V2 do not have any relation between them?
     * No, Pearson correlation coefficient between 2 variables might be zero even when they have a relationship between them. If the correlation coefficient is zero, it just means that that they don’t move together. We can take examples like y=|x| or y=x^2
