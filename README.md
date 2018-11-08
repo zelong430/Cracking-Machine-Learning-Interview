@@ -65,9 +65,10 @@ Or in vector form,
 
         <a href="https://www.codecogs.com/eqnedit.php?latex=\\\bigtriangledown_xw^Tx=w&space;\newline&space;\bigtriangledown_xx^TAx=2A,&space;\text{where&space;A&space;is&space;symmetrix&space;matrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\\\bigtriangledown_xw^Tx=w&space;\newline&space;\bigtriangledown_xx^TAx=2A,&space;\text{where&space;A&space;is&space;symmetrix&space;matrix}" title="\\\bigtriangledown_xw^Tx=w \newline \bigtriangledown_xx^TAx=2Ax, \text{where A is symmetrix matrix}" /></a>
 
+        we could have:
         <a href="https://www.codecogs.com/eqnedit.php?latex=\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw=2X^TXw-2X^Ty" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw=2X^TXw-2X^Ty" title="\bigtriangledown_ww^TX^TXw-2\bigtriangledown_wy^TXw=2X^TXw-2X^Ty" /></a>
 
-        By setting the gradient equal to 0, we have
+        By setting the gradient equal to 0, 
         <a href="https://www.codecogs.com/eqnedit.php?latex=w&space;=&space;(X^TX)^{-1}X^Ty" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w&space;=&space;(X^TX)^{-1}X^Ty" title="w = (X^TX)^{-1}X^Ty" /></a>
 
 
